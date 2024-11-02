@@ -16,7 +16,7 @@ public class CustomExceptionHandler {
 	@ExceptionHandler(BusinessException.class)
 	public ResponseEntity<List<ErrorModel>> handleBusinessException(BusinessException bex)
 	{
-		System.out.println("Business Exception is thrown");
+		System.out.println("Business Exception is thrown successfully");
 		return new ResponseEntity<List<ErrorModel>>(bex.getErrors(),HttpStatus.BAD_REQUEST);
 	}
 	@ExceptionHandler(MethodArgumentNotValidException.class)
